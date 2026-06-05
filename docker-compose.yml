@@ -12,7 +12,8 @@ services:
       - mysql_data:/var/lib/mysql
 
   backend:
-    build: .
+   # build: .
+    image: sandhya10/smartcity-backend:v1
     container_name: smartcity-backend
     ports:
       - "8080:8080"
@@ -20,7 +21,8 @@ services:
       - mysql
 
   frontend:
-    build: C:/Users/rames/smart-city-frontend
+   # build: C:/Users/rames/smart-city-frontend
+    image: sandhya10/smartcity-frontend:v1
     container_name: smartcity-frontend
     ports:
       - "3000:3000"
