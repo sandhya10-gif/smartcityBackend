@@ -20,3 +20,6 @@ jobs:
 
       - name: Push Image
         run: docker push sandhya10/smartcity-backend:latest
+
+      - name: Trigger Render Deploy
+        run: curl "${{ secrets.RENDER_DEPLOY_HOOK }}"
