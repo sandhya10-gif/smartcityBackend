@@ -13,10 +13,10 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Build Docker Image
-        run: docker build -t sandhya10-gif/smartcitybackend:latest .
+        run: docker build -t sandhya10/smartcity-backend:latest .
 
       - name: Login to Docker Hub
         run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
 
       - name: Push Image
-        run: docker push sandhya10-gif/smartcitybackend:latest
+        run: docker push sandhya10/smartcity-backend:latest
